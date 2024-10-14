@@ -16,9 +16,13 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `merchant-app`: a [Next.js](https://nextjs.org/) app
+- `user-app`: another [Next.js](https://nextjs.org/) app
+- `bank-webhook`: a dummy bank webHook to replicate the bank services
+
+- `@repo/ui `: a stub React component library shared by all the applications
+- `@repo/orm `: a postgres prisma ORM for the apps
+- `@repo/store `: a recoil js for passing props
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
@@ -37,17 +41,7 @@ This Turborepo has some additional tools already setup for you:
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
+npm run build
 ```
 
 ### Remote Caching
