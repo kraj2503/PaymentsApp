@@ -61,6 +61,8 @@ export const AddMoney = () => {
             value: x.name,
           }))}
         />
+
+        
         <div className="flex justify-center pt-4">
           <Button onClick={handleAddMoney}>Add Money</Button>
         </div>
