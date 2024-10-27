@@ -7,6 +7,7 @@ export function AppbarClient() {
   const session = useSession();
   const router = useRouter();
 
+  
   return (
     <div>
       <Appbar
