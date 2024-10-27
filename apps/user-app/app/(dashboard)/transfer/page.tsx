@@ -18,20 +18,6 @@ async function getBalance() {
   };
 }
 
-export async function getName() {
-  const session = await getServerSession(authOptions);
-  if (session) {
-    const user = await prisma.user.findFirst({
-      where: {
-        id:   session?.user.id
-      },
-    });
-    return {
-      name: user?.name,
-    };
-  }
-}
-
 async function getOnRampTransactions() {
   const session = await getServerSession(authOptions);
   const txns = await prisma.onRampTransaction.findMany({
@@ -49,7 +35,6 @@ async function getOnRampTransactions() {
 
 export default async function () {
   const balance = await getBalance();
-//   const name = await getName();
   const transactions = await getOnRampTransactions();
 
   return (
