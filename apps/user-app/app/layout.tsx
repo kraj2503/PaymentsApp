@@ -13,6 +13,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
 });
 
+
 export const metadata: Metadata = {
   title: "Wallet",
   description: "Simple Wallert app",
