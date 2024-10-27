@@ -1,10 +1,4 @@
 
-import prisma from "@repo/orm/client";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../../lib/auth";
-
-
-
 export default function (){
 
     return  <div className="">
