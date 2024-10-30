@@ -39,4 +39,4 @@ jobs:
             sudo docker pull rajpx10/payments:latest
             sudo docker stop payments || true
             sudo docker rm payments || true
-            sudo docker run -d --name payments -p 3005:3000 rajpx10/payments:latest
+            sudo docker run -d -e DATABASE_URL ${{secrets.DATABASE_URL}} --name payments -p 3005:3000 rajpx10/payments:latest
